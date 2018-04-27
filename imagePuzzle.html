@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+            $(document).ready(function(){
+            //attach a click event listener to all the img tags when the document is ready
+                $('img').click(function(){
+                    var temp = $(this).attr('data-alt-src');
+                    var second = $(this).attr('src');
+                    $(this).attr('src', temp);
+                    $(this).attr('data-alt-src', second);
+                })   
+                });
+            
+        </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="image">
+        <img  src="hardy1.jpg" data-alt-src='venom1.jpg'>
+        <img  src="hardy2.jpg" data-alt-src='venom2.jpg'>
+        <img  src="hardy3.jpg" data-alt-src='venom3.jpg'>
+        <img  src="hardy4.jpg" data-alt-src='venom4.jpg'>
+        <img  src="hardy5.jpg" data-alt-src='venom5.jpg'>
+    </div>
+    
+</body>
+</html>
